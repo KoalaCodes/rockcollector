@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Rock List</h1>
+
+{% for rock in rocks %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ Rock.name }}</span>
+      <p>Category: {{ Rock.category }}</p>
+      <p>Description: {{ Rock.description }}</p>
+      {% if Rock.age > 0 %}
+        <p>Age: {{ Rock.age }}</p>
+      {% else %}
+        <p>Age: Kitten</p>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}

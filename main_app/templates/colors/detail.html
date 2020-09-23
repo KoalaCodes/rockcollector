@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="card">
+        <div class ="card-content">
+            <span class="card-title"><span class="{{color.name.upper}}-text">{{ color.color }}</span>{{ color.name }}</span>
+            <p>color: {{ color.color}}</p>
+        </div>
+        <div class="card-action">
+            <a href="{% url 'colors_update' color.id%}"></a>
+            <a href="{% url 'colors_delete' color.id%}"></a>
+        </div>
+    </div>
+
+{% endblock %}

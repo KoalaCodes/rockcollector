@@ -1,0 +1,11 @@
+<h1>Delete COLOR</h1>
+
+<h4>ARE YOU SURE!! <span class="teal-text">{{ object.name }}</span></h4>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Yes Delete" class="btn">
+    <a href="{% url 'detail' object.id %}">cancel</a>
+</form>
+
+{% endblock %}

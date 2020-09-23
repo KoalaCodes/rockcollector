@@ -1,0 +1,15 @@
+<% extends 'base.html' %}
+
+{% block content %}
+    {% for color in colors %}
+    <div class="card">
+        <a href="{% url 'color_detail' color.id %}">
+            <div class="card-content">
+                <span class="card-title">{{color.name}}</span>
+                <p>Color: {{color.color}}</p>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+{% endblock %}
+    
